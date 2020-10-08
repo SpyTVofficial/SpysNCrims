@@ -1,5 +1,6 @@
 package me.Spy.Main;
 
+import com.mysql.jdbc.Connection;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
@@ -34,17 +35,19 @@ public class Main extends JavaPlugin implements Listener {
 	public Connection connection;
 	public String host, database, username, password;
 	public int port;
-	public static String prefix = "§8[§b§lCopsAndCrims§r§8]";
-	public static String noperms = prefix + " §cKeine Rechte!";
-	public static String nocop = prefix + " §cDu bist kein Polizist!";
-	public static String npc = "§e[NPC] ";
+	public static String prefix = "ï¿½8[ï¿½bï¿½lCopsAndCrimsï¿½rï¿½8]";
+	public static String noperms = prefix + " ï¿½cKeine Rechte!";
+	public static String nocop = prefix + " ï¿½cDu bist kein Polizist!";
+	public static String npc = "ï¿½e[NPC] ";
+	public static String version = "1.0";
 	
-	public static String cop = "§b§l[Cop] ";
+	public static String cop = "ï¿½bï¿½l[Cop] ";
 
 	public void onEnable() {
 		Player p = null;
 		System.out.println("Spys And Crims Plugin erfolgreich aktiviert!");
 		System.out.println("Plugin von itsSpyTV geplant und entwickelt!");
+		System.out.println("Version: " + version);
 
 		init();
 	}
