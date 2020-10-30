@@ -18,7 +18,7 @@ public class GameEnd implements Listener {
 	
 	public static void onGameEnd() {
 		for (Player players : Bukkit.getOnlinePlayers())
-			players.sendMessage(Main.prefix + " §cServer startet in 30 Sekunden neu!");
+			players.sendMessage(Main.prefix + " ï¿½cServer startet in 30 Sekunden neu!");
 		new Thread(new Runnable() {
 			public void run() {
 				try {
@@ -29,7 +29,7 @@ public class GameEnd implements Listener {
 				}
 				ConsoleCommandSender console = Bukkit.getServer().getConsoleSender();
 				for (Player players : Bukkit.getOnlinePlayers())
-					players.sendMessage(Main.prefix + " §cServer stoppt...");
+					players.sendMessage(Main.prefix + " Â§cServer stoppt...");
 				Bukkit.dispatchCommand(console, "stop");
 			}
 

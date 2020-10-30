@@ -21,13 +21,13 @@ public class Roles implements Listener {
 			General.Joined.remove(p);
 			General.Spec.add(p);
             for (Player players : Bukkit.getOnlinePlayers())
-                players.sendMessage(Main.prefix + " §cDer Polizist wurde umgebracht! Der Kriminelle gewinnt!");
+                players.sendMessage(Main.prefix + " Â§cDer Polizist wurde umgebracht! Der Kriminelle gewinnt!");
 		} else if(General.Crim.contains(p)) {
 			General.Joined.remove(p);
 			General.Crim.remove(p);
 			General.Spec.add(p);
             for (Player players : Bukkit.getOnlinePlayers())
-                players.sendMessage(Main.prefix + " §aDer Kriminelle wurde erfolgreich geschnappt!");
+                players.sendMessage(Main.prefix + " Â§aDer Kriminelle wurde erfolgreich geschnappt!");
 		}
 	}
 }

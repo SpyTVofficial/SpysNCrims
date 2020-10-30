@@ -18,12 +18,12 @@ public class General implements Listener {
 		public void Board(Player p) {
 			Scoreboard board = Bukkit.getScoreboardManager().getNewScoreboard();
 			Objective obj = board.registerNewObjective("aaa", "dummy");
-			obj.setDisplayName("§f§lLittleSpyGames");
+			obj.setDisplayName("ï¿½fï¿½lLittleSpyGames");
 			obj.setDisplaySlot(DisplaySlot.SIDEBAR);
 
-			obj.getScore("§aLobby Phase").setScore(3);
+			obj.getScore("ï¿½aLobby Phase").setScore(3);
 			obj.getScore("").setScore(2);
-			obj.getScore("§f§lLittleSpyGames").setScore(1);
+			obj.getScore("ï¿½fï¿½lLittleSpyGames").setScore(1);
 
 			p.setScoreboard(board);
 		}
@@ -32,6 +32,7 @@ public class General implements Listener {
 	public static ArrayList<Player> Crim = new ArrayList<Player>();
 	public static ArrayList<Player> Joined = new ArrayList<Player>();
 	public static ArrayList<Player> Spec = new ArrayList<Player>();
+	public static ArrayList<Player> CrimeChat = new ArrayList<Player>();
 
 	public void checkIfRoleIsEmpty() {
 		if (Joined.size() == 8) {

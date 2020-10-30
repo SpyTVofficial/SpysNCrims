@@ -16,7 +16,10 @@ public class ChatListener implements Listener {
 		if(General.Cop.contains(p)) {
 			e.setFormat(Main.cop + p.getDisplayName() + ": " + e.getMessage());
 		} else {
-			e.setFormat("§a" + p.getDisplayName() + ": " + e.getMessage());
+			e.setFormat("Â§a" + p.getDisplayName() + ": " + e.getMessage());
+		}
+		if(General.CrimeChat.contains(p)){
+			p.sendMessage(e.getMessage());
 		}
 	}
 

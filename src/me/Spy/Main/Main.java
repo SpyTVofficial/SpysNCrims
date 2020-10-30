@@ -1,6 +1,7 @@
 package me.Spy.Main;
 
 import com.mysql.jdbc.Connection;
+import me.Spy.Commands.*;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
@@ -11,10 +12,6 @@ import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitScheduler;
 
-import me.Spy.Commands.DebugCOPCMD;
-import me.Spy.Commands.DebugSTOPCMD;
-import me.Spy.Commands.StartCMD;
-import me.Spy.Commands.StatsCMD;
 import me.Spy.GameHandler.GameEnd;
 import me.Spy.GameHandler.InGame;
 import me.Spy.GameHandler.PlayerDead;
@@ -35,13 +32,12 @@ public class Main extends JavaPlugin implements Listener {
 	public Connection connection;
 	public String host, database, username, password;
 	public int port;
-	public static String prefix = "�8[�b�lCopsAndCrims�r�8]";
-	public static String noperms = prefix + " �cKeine Rechte!";
-	public static String nocop = prefix + " �cDu bist kein Polizist!";
-	public static String npc = "�e[NPC] ";
-	public static String version = "1.0";
-	
-	public static String cop = "�b�l[Cop] ";
+	public static String prefix = "§8[§b§lCopsAndCrims§r§8]";
+	public static String noperms = prefix + " §cKeine Rechte!";
+	public static String nocop = prefix + " §cDu bist kein Polizist!";
+	public static String npc = "§e[NPC] ";
+	public static String version = "0.8";
+	public static String cop = "§b§l[Cop] ";
 
 	public void onEnable() {
 		Player p = null;
@@ -68,6 +64,7 @@ public class Main extends JavaPlugin implements Listener {
 		Bukkit.getPluginManager().registerEvents(new ChatListener(), this);
 	    getCommand("stats").setExecutor(new StatsCMD());
 	    getCommand("start").setExecutor(new StartCMD());
+	    getCommand("cc").setExecutor(new CrimeChatCMD());
 	    getCommand("debugstop").setExecutor(new DebugSTOPCMD());
 	    getCommand("dubassdommxd").setExecutor(new DebugCOPCMD());
 	}
